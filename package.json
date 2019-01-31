@@ -1,0 +1,23 @@
+{
+  "name": "plain-acl-sample",
+  "version": "0.0.1",
+  "description": "Sample of simplest acl",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antirek/plain-acl-sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antirek/plain-acl-sample/issues"
+  },
+  "homepage": "https://github.com/antirek/plain-acl-sample#readme",
+  "dependencies": {
+    "plain-acl": "0.0.1",
+    "tty-table": "^2.7.0"
+  }
+}
