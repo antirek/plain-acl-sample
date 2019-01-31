@@ -9,6 +9,10 @@ const roles = [
         role: 'manager',
         description: 'Менеджер',
     },
+    {
+        role: 'manager2',
+        description: 'Менеджер 2-го типа',
+    },
 ];
 
 const contexts = [
@@ -16,6 +20,10 @@ const contexts = [
         context: 'phone',
         description: '',
         actions: [
+            {
+                action: 'edit',
+                description: 'Изменять'
+            },
             {
                 action: 'delete',
                 description: 'Удалить',
@@ -45,6 +53,9 @@ const rules = {
         phone: ['delete', 'edit'],             // manager can delete & edit with phone
         data: ['print'],
     },
+    manager2: {
+        phone: ['delete']
+    }
 };
 
 
@@ -76,7 +87,7 @@ contexts.forEach((context) => {
         //console.log('action', action.action);
         roles.forEach((role) => {
             //console.log('role', role.role);
-            row.push(acl.can(role.role, context.context, action.action) ? '1' : '0')
+            row.push(acl.can(role.role, context.context, action.action) ? 'yes' : 'no')
         })
         rows.push(row);
     })
