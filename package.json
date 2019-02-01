@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/antirek/plain-acl-sample#readme",
   "dependencies": {
-    "plain-acl": "0.0.3",
+    "plain-acl": "0.0.5",
     "tty-table": "^2.7.0"
   }
 }

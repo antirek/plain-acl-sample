@@ -54,7 +54,7 @@ const rules = {
         data: ['print'],
     },
     manager2: {
-        phone: ['delete']
+        phone: "all"
     }
 };
 
@@ -84,9 +84,9 @@ contexts.forEach((context) => {
         let row = [];
         row[0] = context.context;
         row[1] = action.action;
-        //console.log('action', action.action);
+        console.log('action', action.action);
         roles.forEach((role) => {
-            //console.log('role', role.role);
+            console.log('role', role.role);
             row.push(acl.can(role.role, context.context, action.action) ? 'yes' : 'no')
         })
         rows.push(row);
